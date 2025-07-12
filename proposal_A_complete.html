@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="ja" id="top">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>稲垣明良税理士事務所 - 確かな経験に裏打ちされた画期的なご提案</title>
+    <style>
+        /* proposal_A.cssの内容をここに埋め込み */
+        /* 稲垣明良税理士事務所 - 青と赤を基調としたモダンデザイン */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Poppins', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ヘッダー */
+        .header {
+            background: #1e40af;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #ef4444;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        .menu-close {
+            display: none;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            margin-bottom: 1rem;
+        }
+
+        .close-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            text-align: right;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .close-button:hover {
+            color: #ef4444;
+        }
+
+        .nav-menu a[href="#top"] {
+            background: rgba(239, 68, 68, 0.1);
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .nav-menu a[href="#top"]:hover {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+        }
+
+        /* ヒーローセクション */
+        .hero {
+            margin-top: 80px;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero-background {
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ef4444;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #dc2626;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+        }
+
+        /* セクション共通 */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #1e40af;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #ef4444;
+        }
+
+        /* サービスセクション */
+        .services {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .services-detailed {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .service-category {
+            margin-bottom: 3rem;
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .service-category h3 {
+            color: #1e40af;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #ef4444;
+            padding-bottom: 0.5rem;
+        }
+
+        .service-items {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .service-item {
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #ef4444;
+        }
+
+        .service-item h4 {
+            color: #1e40af;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .service-item p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* アコーディオン形式のサービス項目 */
+        .service-item-accordion {
+            padding: 0;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #ef4444;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            display: none;
+        }
+
+        .service-header {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8f9fa;
+            transition: background-color 0.3s ease;
+        }
+
+        .service-header:hover {
+            background: #e9ecef;
+        }
+
+        .service-header h4 {
+            color: #1e40af;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .service-arrow {
+            color: #1e40af;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .service-content {
+            padding: 0 1.5rem;
+            max-height: 0 !important;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            opacity: 0;
+            display: none;
+        }
+
+        .service-content p {
+            color: #666;
+            line-height: 1.7;
+            margin: 0;
+            padding: 1rem 0;
+        }
+
+        .service-item-accordion.active .service-content {
+            max-height: 300px !important;
+            padding: 0 1.5rem;
+            opacity: 1;
+            display: block;
+        }
+
+        .service-item-accordion.active .service-arrow {
+            transform: rotate(180deg);
+        }
+
+        /* プロフィールセクション */
+        .about {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .about-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .profile-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            align-items: start;
+            margin-bottom: 3rem;
+            text-align: left;
+        }
+
+        .profile-image {
+            display: flex;
+            justify-content: center;
+        }
+
+        .representative-photo {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .representative-photo:hover {
+            transform: scale(1.02);
+        }
+
+        .profile-info h3 {
+            font-size: 1.8rem;
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-title {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .profile-message {
+            margin: 1.5rem 0;
+        }
+
+        .profile-message p {
+            color: #1e40af;
+            font-size: 1.1rem;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .profile-highlights {
+            display: grid;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .highlight-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 1.2rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 3px solid #ef4444;
+        }
+
+        .highlight-label {
+            font-weight: 600;
+            color: #1e40af;
+            min-width: 60px;
+        }
+
+        .highlight-value {
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* 料金案内セクション */
+        .pricing {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .pricing-detailed {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .pricing-section {
+            margin-bottom: 3rem;
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .pricing-section h3 {
+            color: #1e40af;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #ef4444;
+            padding-bottom: 0.5rem;
+        }
+
+        .pricing-table {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .pricing-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border-left: 3px solid #1e40af;
+        }
+
+        .revenue-range {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .price-range {
+            font-weight: bold;
+            color: #ef4444;
+        }
+
+        .other-services {
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .service-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border-left: 3px solid #ef4444;
+        }
+
+        .service-name {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .service-fee {
+            font-weight: bold;
+            color: #1e40af;
+        }
+
+        .pricing-notes {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 4px;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        .pricing-notes p {
+            margin: 0.3rem 0;
+            color: #856404;
+            font-size: 0.9rem;
+        }
+
+        /* 選ばれる理由セクション */
+        .reasons {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .reason-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .reason-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .reason-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .reason-card h3 {
+            color: #1e40af;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .reason-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* お問い合わせセクション */
+        .contact {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1e40af;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e1e5e9;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #1e40af;
+        }
+
+        .submit-button {
+            background: #1e40af;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background: #3b82f6;
+            transform: translateY(-2px);
+        }
+
+        .contact-info h3 {
+            color: #1e40af;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .office-address {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #1e40af;
+        }
+
+        .access-info, .business-hours {
+            margin-bottom: 1.5rem;
+        }
+
+        .access-info h4, .business-hours h4 {
+            color: #1e40af;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            border-bottom: 1px solid #ef4444;
+            padding-bottom: 0.3rem;
+        }
+
+        .access-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .access-info li {
+            padding: 0.3rem 0;
+            color: #666;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+        .access-info li:before {
+            content: "🚃";
+            position: absolute;
+            left: 0;
+        }
+
+        .business-hours p {
+            color: #666;
+            background: #f8f9fa;
+            padding: 0.8rem;
+            border-radius: 4px;
+            margin: 0;
+        }
+
+        .map {
+            margin-top: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* フッター */
+        .footer {
+            background: #1e40af;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer p {
+            opacity: 0.8;
+        }
+
+        /* タブレット対応 */
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                width: 250px;
+                height: calc(100vh - 80px);
+                background: #1e40af;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 2rem;
+                transition: right 0.3s ease;
+                box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu.active .menu-close {
+                display: block;
+            }
+
+            .nav-menu li {
+                margin: 1rem 0;
+            }
+
+            .nav-menu a {
+                font-size: 1.1rem;
+                padding: 0.5rem 1rem;
+                display: block;
+            }
+
+            .mobile-menu-toggle.active span:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .mobile-menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .mobile-menu-toggle.active span:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+
+            .hero {
+                padding: 3rem 0;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .services {
+                padding: 3rem 0;
+            }
+
+            .about {
+                padding: 3rem 0;
+            }
+
+            .pricing {
+                padding: 3rem 0;
+            }
+
+            .contact {
+                padding: 3rem 0;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .reasons-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-row, .service-price {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .service-category {
+                padding: 1.5rem;
+            }
+            
+            /* スマホでアコーディオン形式を有効にする */
+            .service-item {
+                display: none !important;
+            }
+            
+            .service-item-accordion {
+                display: block !important;
+            }
+            
+            .service-item-accordion .service-content {
+                display: none !important;
+                max-height: 0 !important;
+                opacity: 0 !important;
+            }
+            
+            .service-item-accordion.active .service-content {
+                display: block !important;
+                max-height: 300px !important;
+                opacity: 1 !important;
+            }
+            
+            .profile-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .representative-photo {
+                max-width: 250px;
+            }
+        }
+
+        /* スマートフォン対応 */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+
+            .header {
+                padding: 0.8rem 0;
+            }
+
+            .logo h1 {
+                font-size: 1.2rem;
+            }
+
+            .hero {
+                margin-top: 70px;
+                padding: 2rem 0;
+            }
+
+            .hero-title {
+                font-size: 1.5rem;
+                line-height: 1.3;
+            }
+
+            .hero-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .cta-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 1.3rem;
+            }
+
+            .nav-menu {
+                width: 100%;
+                right: -100%;
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>稲垣明良税理士事務所</h1>
+                </div>
+                <nav class="nav">
+                    <div class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="nav-menu">
+                        <li class="menu-close">
+                            <button class="close-button" aria-label="メニューを閉じる">×</button>
+                        </li>
+                        <li><a href="#top">トップ</a></li>
+                        <li><a href="#about">代表者挨拶</a></li>
+                        <li><a href="#services">サービス内容</a></li>
+                        <li><a href="#pricing">料金案内</a></li>
+                        <li><a href="#reasons">選ばれる理由</a></li>
+                        <li><a href="#access">アクセス</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- ヒーローセクション -->
+        <section class="hero">
+            <div class="hero-background">
+                <div class="container">
+                    <div class="hero-content">
+                        <h2 class="hero-title">確かな経験に裏打ちされた<br>画期的なご提案</h2>
+                        <p class="hero-subtitle">
+                            複雑な税務を「わかりやすく」。BIG4出身の若手税理士が<br>
+                            高品質なサービスを適正な価格で提供します。
+                        </p>
+                        <div class="hero-cta">
+                            <a href="#contact" class="cta-button">無料相談はこちら</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- プロフィールセクション -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">代表者ご挨拶</h2>
+                <div class="about-content">
+                    <div class="profile-container">
+                        <div class="profile-image">
+                            <img src="images/representative.jpg" alt="稲垣明良税理士" class="representative-photo">
+                        </div>
+                        <div class="profile-info">
+                            <h3>稲垣明良（いながき あきら）</h3>
+                            <p class="profile-title">代表税理士</p>
+                            
+                            <div class="profile-message">
+                                <p>複雑な税務を「わかりやすく」、高品質なサービスを適正な価格で提供します。</p>
+                            </div>
+                            
+                            <div class="profile-highlights">
+                                <div class="highlight-item">
+                                    <span class="highlight-label">出身</span>
+                                    <span class="highlight-value">慶應義塾大学商学部</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-label">経歴</span>
+                                    <span class="highlight-value">EY税理士法人出身</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-label">登録</span>
+                                    <span class="highlight-value">2025年3月</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-label">開業</span>
+                                    <span class="highlight-value">2025年5月1日</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- サービスセクション -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">サービス内容</h2>
+                <div class="services-detailed">
+                    <div class="service-category">
+                        <h3>税務コンサルティングサービス</h3>
+                        <div class="service-items">
+                            <!-- デスクトップ表示用 -->
+                            <div class="service-item">
+                                <h4>税務申告サービス</h4>
+                                <p>法人税・消費税の申告書作成から提出までをサポート。複雑な税制や最新の税法改正にも対応し、最適な税務計算を実現します。</p>
+                            </div>
+                            <div class="service-item">
+                                <h4>税務相談</h4>
+                                <p>日常の税務・会計の疑問から税務プランニングまで幅広くサポート。事業拡大時の税務リスクを事前に評価します。</p>
+                            </div>
+                            <div class="service-item">
+                                <h4>税務調査立会</h4>
+                                <p>税務当局の調査時に同席し、税理士として適切な発言を行います。調査後の対応もサポートします。</p>
+                            </div>
+                            <div class="service-item">
+                                <h4>事業計画アドバイス</h4>
+                                <p>最適な事業形態の推奨や法人設立のタイミングなど、経営戦略に関するアドバイスを提供します。</p>
+                            </div>
+                            <div class="service-item">
+                                <h4>資金調達アドバイス</h4>
+                                <p>金融機関向けの事業計画書作成支援や融資戦略の立案を行います。</p>
+                            </div>
+                            
+                            <!-- モバイル表示用（アコーディオン） -->
+                            <div class="service-item-accordion">
+                                <div class="service-header">
+                                    <h4>税務申告サービス</h4>
+                                    <span class="service-arrow">▼</span>
+                                </div>
+                                <div class="service-content">
+                                    <p>法人税・消費税の申告書作成から提出までをサポート。複雑な税制や最新の税法改正にも対応し、最適な税務計算を実現します。</p>
+                                </div>
+                            </div>
+                            <div class="service-item-accordion">
+                                <div class="service-header">
+                                    <h4>税務相談</h4>
+                                    <span class="service-arrow">▼</span>
+                                </div>
+                                <div class="service-content">
+                                    <p>日常の税務・会計の疑問から税務プランニングまで幅広くサポート。事業拡大時の税務リスクを事前に評価します。</p>
+                                </div>
+                            </div>
+                            <div class="service-item-accordion">
+                                <div class="service-header">
+                                    <h4>税務調査立会</h4>
+                                    <span class="service-arrow">▼</span>
+                                </div>
+                                <div class="service-content">
+                                    <p>税務当局の調査時に同席し、税理士として適切な発言を行います。調査後の対応もサポートします。</p>
+                                </div>
+                            </div>
+                            <div class="service-item-accordion">
+                                <div class="service-header">
+                                    <h4>事業計画アドバイス</h4>
+                                    <span class="service-arrow">▼</span>
+                                </div>
+                                <div class="service-content">
+                                    <p>最適な事業形態の推奨や法人設立のタイミングなど、経営戦略に関するアドバイスを提供します。</p>
+                                </div>
+                            </div>
+                            <div class="service-item-accordion">
+                                <div class="service-header">
+                                    <h4>資金調達アドバイス</h4>
+                                    <span class="service-arrow">▼</span>
+                                </div>
+                                <div class="service-content">
+                                    <p>金融機関向けの事業計画書作成支援や融資戦略の立案を行います。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-category">
+                        <h3>所得税サービス</h3>
+                        <div class="service-items">
+                            <div class="service-item">
+                                <p>事業所得、不動産所得、株式・不動産売却などをお持ちの方を対象に、確定申告サービスを提供します。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-category">
+                        <h3>相続税・贈与税サービス</h3>
+                        <div class="service-items">
+                            <!-- デスクトップ表示用 -->
+                            <div class="service-item">
+                                <h4>相続税シミュレーション</h4>
+                                <p>現在の家族の資産状況を評価し、税額軽減策の立案、適切な遺産分割の推奨、遺言書作成支援を行います。</p>
+                            </div>
+                            <div class="service-item">
+                                <h4>相続税申告</h4>
+                                <p>必要書類の収集から資産評価、適切な遺産分割の提案まで、相続税申告書の作成を総合的にサポートします。</p>
+                            </div>
+                            
+                            <!-- モバイル表示用（アコーディオン） -->
+                            <div class="service-item-accordion">
+                                <div class="service-header">
+                                    <h4>相続税シミュレーション</h4>
+                                    <span class="service-arrow">▼</span>
+                                </div>
+                                <div class="service-content">
+                                    <p>現在の家族の資産状況を評価し、税額軽減策の立案、適切な遺産分割の推奨、遺言書作成支援を行います。</p>
+                                </div>
+                            </div>
+                            <div class="service-item-accordion">
+                                <div class="service-header">
+                                    <h4>相続税申告</h4>
+                                    <span class="service-arrow">▼</span>
+                                </div>
+                                <div class="service-content">
+                                    <p>必要書類の収集から資産評価、適切な遺産分割の提案まで、相続税申告書の作成を総合的にサポートします。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 料金案内セクション -->
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <h2 class="section-title">料金案内</h2>
+                <div class="pricing-detailed">
+                    <div class="pricing-section">
+                        <h3>月額顧問料</h3>
+                        <div class="pricing-table">
+                            <div class="pricing-row">
+                                <div class="revenue-range">年商 1,000万円未満</div>
+                                <div class="price-range">20,000円～</div>
+                            </div>
+                            <div class="pricing-row">
+                                <div class="revenue-range">年商 1,000万円～5,000万円</div>
+                                <div class="price-range">25,000円～</div>
+                            </div>
+                            <div class="pricing-row">
+                                <div class="revenue-range">年商 5,000万円～1億円</div>
+                                <div class="price-range">30,000円～</div>
+                            </div>
+                            <div class="pricing-row">
+                                <div class="revenue-range">年商 1億円～3億円</div>
+                                <div class="price-range">45,000円～</div>
+                            </div>
+                            <div class="pricing-row">
+                                <div class="revenue-range">年商 3億円～5億円</div>
+                                <div class="price-range">60,000円～</div>
+                            </div>
+                            <div class="pricing-row">
+                                <div class="revenue-range">年商 5億円超</div>
+                                <div class="price-range">ご相談ください</div>
+                            </div>
+                        </div>
+                        <div class="pricing-notes">
+                            <p>※ 打合せの頻度によって金額が変動いたします。</p>
+                            <p>※ 年商規模に応じて、決算時に毎年顧問料金を改定いたします。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-section">
+                        <h3>その他サービス料金</h3>
+                        <div class="other-services">
+                            <div class="service-price">
+                                <span class="service-name">消費税申告</span>
+                                <span class="service-fee">20,000円～</span>
+                            </div>
+                            <div class="service-price">
+                                <span class="service-name">年末調整・資産申告</span>
+                                <span class="service-fee">30,000円～</span>
+                            </div>
+                            <div class="service-price">
+                                <span class="service-name">所得税申告</span>
+                                <span class="service-fee">50,000円～</span>
+                            </div>
+                            <div class="service-price">
+                                <span class="service-name">法人税申告</span>
+                                <span class="service-fee">100,000円～</span>
+                            </div>
+                            <div class="service-price">
+                                <span class="service-name">相続税申告</span>
+                                <span class="service-fee">200,000円～</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-notes">
+                        <p>※ 相談頻度によって料金が変動する場合があります。</p>
+                        <p>※ 年間顧問料は年商に応じて毎年見直しを行います。</p>
+                        <p>※ 資本金が1億円を超える会社は別途料金が発生する場合があります。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 選ばれる理由セクション -->
+        <section id="reasons" class="reasons">
+            <div class="container">
+                <h2 class="section-title">選ばれる理由</h2>
+                <div class="reasons-grid">
+                    <div class="reason-card">
+                        <div class="reason-icon">💼</div>
+                        <h3>BIG4出身の信頼性</h3>
+                        <p>大手税理士法人での豊富な実務経験により、複雑な案件にも確実に対応します。</p>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-icon">⚡</div>
+                        <h3>若手ならではのスピード</h3>
+                        <p>従来の税理士業界にはない、迅速でフレキシブルな対応を実現します。</p>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-icon">🌐</div>
+                        <h3>全国対応可能</h3>
+                        <p>リモートツールとクラウド会計を活用し、全国どこでもサポートいたします。</p>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-icon">💡</div>
+                        <h3>革新的なアプローチ</h3>
+                        <p>最新のテクノロジーを活用した、効率的で革新的な税務サービスを提供します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- アクセスセクション -->
+        <section id="access" class="contact">
+            <div class="container">
+                <h2 class="section-title">アクセス</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>事務所情報</h3>
+                        <p><strong>稲垣明良税理士事務所</strong></p>
+                        <div class="office-address">
+                            <p>〒160-0023<br>
+                            東京都新宿区西新宿5-8-2<br>
+                            恵徳ビル5F</p>
+                        </div>
+                        
+                        <div class="access-info">
+                            <h4>アクセス</h4>
+                            <ul>
+                                <li>都営大江戸線 西新宿五丁目駅から4分</li>
+                                <li>東京メトロ丸ノ内線 西新宿五丁目駅から10分</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="business-hours">
+                            <h4>営業時間</h4>
+                            <p>月曜日～金曜日: 9:00～19:00<br>
+                            土曜日・日曜日: 10:00～19:00</p>
+                        </div>
+                        
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.0978594525986!2d139.6861743!3d35.6944444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cd0c2e3e1a1%3A0x1a2b3c4d5e6f7890!2z5p2x5Lqs6YO95paw5a6_5Yy65pqX5paw5a6_77yV4oiS77yY4oiS77yS!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>お問い合わせ</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">お名前</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">メールアドレス</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">お問い合わせ内容</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-button">送信する</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 稲垣明良税理士事務所. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // アコーディオンの動作
+            const accordions = document.querySelectorAll('.service-item-accordion');
+
+            accordions.forEach(accordion => {
+                const header = accordion.querySelector('.service-header');
+                const content = accordion.querySelector('.service-content');
+                
+                // 初期状態で確実に閉じる
+                accordion.classList.remove('active');
+                content.style.display = 'none';
+                content.style.maxHeight = '0';
+                
+                header.addEventListener('click', () => {
+                    const isActive = accordion.classList.contains('active');
+                    
+                    // 他のアコーディオンを閉じる
+                    accordions.forEach(otherAccordion => {
+                        if (otherAccordion !== accordion) {
+                            otherAccordion.classList.remove('active');
+                            const otherContent = otherAccordion.querySelector('.service-content');
+                            otherContent.style.display = 'none';
+                            otherContent.style.maxHeight = '0';
+                        }
+                    });
+                    
+                    // 現在のアコーディオンを切り替え
+                    if (isActive) {
+                        accordion.classList.remove('active');
+                        content.style.display = 'none';
+                        content.style.maxHeight = '0';
+                    } else {
+                        accordion.classList.add('active');
+                        content.style.display = 'block';
+                        content.style.maxHeight = '300px';
+                    }
+                });
+            });
+
+            // モバイルメニュー動作
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            const closeButton = document.querySelector('.close-button');
+
+            if (mobileMenuToggle && navMenu) {
+                // メニューを閉じる関数
+                const closeMenu = () => {
+                    mobileMenuToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                };
+
+                // ハンバーガーメニュー開閉
+                mobileMenuToggle.addEventListener('click', () => {
+                    mobileMenuToggle.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+
+                // 戻るボタン（×ボタン）クリック時の処理
+                if (closeButton) {
+                    closeButton.addEventListener('click', closeMenu);
+                }
+
+                // メニューリンククリック時の処理
+                navLinks.forEach(link => {
+                    link.addEventListener('click', closeMenu);
+                });
+
+                // 外側クリックでメニュー閉じる
+                document.addEventListener('click', (e) => {
+                    if (!mobileMenuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                        closeMenu();
+                    }
+                });
+            }
+
+            // スムーススクロール
+            const anchors = document.querySelectorAll('a[href^="#"]');
+            anchors.forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const href = this.getAttribute('href');
+                    
+                    // トップページへのリンクの場合
+                    if (href === '#top') {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                        return;
+                    }
+                    
+                    // その他のアンカーリンクの場合
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const headerHeight = document.querySelector('.header').offsetHeight;
+                        const targetPosition = target.offsetTop - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // フォーム送信処理
+            const contactForm = document.querySelector('form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('お問い合わせありがとうございます。後日ご連絡いたします。');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

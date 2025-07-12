@@ -1,0 +1,94 @@
+document.addEventListener('DOMContentLoaded', function () {
+    // アコーディオンの動作
+    const accordions = document.querySelectorAll('.service-item-accordion');
+
+    accordions.forEach(accordion => {
+        const header = accordion.querySelector('.service-header');
+        header.addEventListener('click', () => {
+            // 他のアコーディオンを閉じる処理は現在コメントアウト
+            
+            accordion.classList.toggle('active');
+        });
+    });
+
+    // モバイルメニュー動作
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    const closeButton = document.querySelector('.close-button');
+
+    console.log('モバイルメニュートグル:', mobileMenuToggle);
+    console.log('ナビゲーションメニュー:', navMenu);
+
+    if (mobileMenuToggle && navMenu) {
+        // メニューを閉じる関数
+        const closeMenu = () => {
+            mobileMenuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        };
+
+        // ハンバーガーメニュー開閉
+        mobileMenuToggle.addEventListener('click', () => {
+            console.log('モバイルメニュートグルがクリックされました');
+            mobileMenuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            console.log('active状態:', mobileMenuToggle.classList.contains('active'));
+        });
+
+        // 戻るボタン（×ボタン）クリック時の処理
+        if (closeButton) {
+            closeButton.addEventListener('click', closeMenu);
+        }
+
+        // メニューリンククリック時の処理
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // 外側クリックでメニュー閉じる
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                closeMenu();
+            }
+        });
+    }
+
+    // スムーススクロール
+    const anchors = document.querySelectorAll('a[href^="#"]');
+    anchors.forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            
+            // トップページへのリンクの場合
+            if (href === '#top') {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                return;
+            }
+            
+            // その他のアンカーリンクの場合
+            const target = document.querySelector(href);
+            if (target) {
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const targetPosition = target.offsetTop - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // フォーム送信処理
+    const contactForm = document.querySelector('form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('お問い合わせありがとうございます。後日ご連絡いたします。');
+        });
+    }
+});
