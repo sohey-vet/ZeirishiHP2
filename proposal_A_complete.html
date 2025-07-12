@@ -356,6 +356,82 @@
             line-height: 1.6;
         }
 
+        .profile-detailed-message {
+            margin: 1.5rem 0;
+        }
+
+        .profile-detailed-message p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        /* プロフィールアコーディオン */
+        .profile-accordion {
+            padding: 0;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #1e40af;
+            margin: 1.5rem 0;
+            overflow: hidden;
+            display: none;
+        }
+
+        .profile-accordion-header {
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8f9fa;
+            transition: background-color 0.3s ease;
+        }
+
+        .profile-accordion-header:hover {
+            background: #e9ecef;
+        }
+
+        .profile-accordion-header h4 {
+            color: #1e40af;
+            font-size: 1.1rem;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .profile-arrow {
+            color: #1e40af;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-accordion-content {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            opacity: 0;
+            display: none;
+        }
+
+        .profile-accordion-content p {
+            color: #666;
+            line-height: 1.7;
+            margin: 0 0 1rem 0;
+            padding: 0.5rem 0;
+        }
+
+        .profile-accordion.active .profile-accordion-content {
+            max-height: 800px;
+            padding: 0 1.5rem 1.5rem;
+            opacity: 1;
+            display: block;
+        }
+
+        .profile-accordion.active .profile-arrow {
+            transform: rotate(180deg);
+        }
+
         .profile-highlights {
             display: grid;
             gap: 1rem;
@@ -782,6 +858,27 @@
             .representative-photo {
                 max-width: 250px;
             }
+            
+            /* スマホでプロフィールアコーディオンを表示 */
+            .profile-detailed-message {
+                display: none !important;
+            }
+            
+            .profile-accordion {
+                display: block !important;
+            }
+            
+            .profile-accordion .profile-accordion-content {
+                display: none !important;
+                max-height: 0 !important;
+                opacity: 0 !important;
+            }
+            
+            .profile-accordion.active .profile-accordion-content {
+                display: block !important;
+                max-height: 800px !important;
+                opacity: 1 !important;
+            }
         }
 
         /* スマートフォン対応 */
@@ -899,6 +996,34 @@
                                 <p>複雑な税務を「わかりやすく」、高品質なサービスを適正な価格で提供します。</p>
                             </div>
                             
+                            <!-- デスクトップ表示用詳細メッセージ -->
+                            <div class="profile-detailed-message">
+                                <p>当事務所のホームページをご覧いただきありがとうございます！</p>
+                                <p>当事務所は業界平均年齢60歳以上と言われる税理士業界の中では若手である30代前半の税理士が、大手税理士法人で培った経験をもとに高品質なサービスをリーズナブルにご提供することを強みとしています。</p>
+                                <p>税金は私たちの生活に身近なものではある反面、非常にわかりづらいもの、という印象をお持ちではないでしょうか。</p>
+                                <p>税法は毎年改正が重ねられ、その複雑さは年々増しており、我々専門家から見てもわかりづらく感じる場面は多々あり、お客様から見てわかりづらく感じるのは当然のことです。</p>
+                                <p>当事務所はその「わかりづらい」税金を皆様に「わかりやすく」ご説明することを心がけております。</p>
+                                <p>税金でお困りごとがありましたら、是非一度お問い合わせください。</p>
+                                <p>精一杯サポートさせて頂くことをお約束致します。</p>
+                            </div>
+                            
+                            <!-- モバイル表示用アコーディオン -->
+                            <div class="profile-accordion">
+                                <div class="profile-accordion-header">
+                                    <h4>代表からのメッセージ</h4>
+                                    <span class="profile-arrow">▼</span>
+                                </div>
+                                <div class="profile-accordion-content">
+                                    <p>当事務所のホームページをご覧いただきありがとうございます！</p>
+                                    <p>当事務所は業界平均年齢60歳以上と言われる税理士業界の中では若手である30代前半の税理士が、大手税理士法人で培った経験をもとに高品質なサービスをリーズナブルにご提供することを強みとしています。</p>
+                                    <p>税金は私たちの生活に身近なものではある反面、非常にわかりづらいもの、という印象をお持ちではないでしょうか。</p>
+                                    <p>税法は毎年改正が重ねられ、その複雑さは年々増しており、我々専門家から見てもわかりづらく感じる場面は多々あり、お客様から見てわかりづらく感じるのは当然のことです。</p>
+                                    <p>当事務所はその「わかりづらい」税金を皆様に「わかりやすく」ご説明することを心がけております。</p>
+                                    <p>税金でお困りごとがありましたら、是非一度お問い合わせください。</p>
+                                    <p>精一杯サポートさせて頂くことをお約束致します。</p>
+                                </div>
+                            </div>
+                            
                             <div class="profile-highlights">
                                 <div class="highlight-item">
                                     <span class="highlight-label">出身</span>
@@ -1005,8 +1130,20 @@
                     <div class="service-category">
                         <h3>所得税サービス</h3>
                         <div class="service-items">
+                            <!-- デスクトップ表示用 -->
                             <div class="service-item">
-                                <p>事業所得、不動産所得、株式・不動産売却などをお持ちの方を対象に、確定申告サービスを提供します。</p>
+                                <p>事業収入、不動産収入がある方、株式や土地建物の売却を行った方など、所得税の確定申告が必要です。<br>所得税の申告・納税についてサポート致します。</p>
+                            </div>
+                            
+                            <!-- モバイル表示用（アコーディオン） -->
+                            <div class="service-item-accordion">
+                                <div class="service-header">
+                                    <h4>所得税サービス</h4>
+                                    <span class="service-arrow">▼</span>
+                                </div>
+                                <div class="service-content">
+                                    <p>事業収入、不動産収入がある方、株式や土地建物の売却を行った方など、所得税の確定申告が必要です。<br>所得税の申告・納税についてサポート致します。</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1250,6 +1387,34 @@
                         accordion.classList.add('active');
                         content.style.display = 'block';
                         content.style.maxHeight = '300px';
+                    }
+                });
+            });
+
+            // プロフィールアコーディオンの動作
+            const profileAccordions = document.querySelectorAll('.profile-accordion');
+            
+            profileAccordions.forEach(accordion => {
+                const header = accordion.querySelector('.profile-accordion-header');
+                const content = accordion.querySelector('.profile-accordion-content');
+                
+                // 初期状態で確実に閉じる
+                accordion.classList.remove('active');
+                content.style.display = 'none';
+                content.style.maxHeight = '0';
+                
+                header.addEventListener('click', () => {
+                    const isActive = accordion.classList.contains('active');
+                    
+                    // 現在のアコーディオンを切り替え
+                    if (isActive) {
+                        accordion.classList.remove('active');
+                        content.style.display = 'none';
+                        content.style.maxHeight = '0';
+                    } else {
+                        accordion.classList.add('active');
+                        content.style.display = 'block';
+                        content.style.maxHeight = '800px';
                     }
                 });
             });
